@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
 	def show
 		@event = Event.all
-		render json: @event.as_json(:except => [:id, :updated_at , :created_at])
+		render json: @event.as_json(:except => [:id, :updated_at , :created_at]) , status: :created
 	end
 
 
